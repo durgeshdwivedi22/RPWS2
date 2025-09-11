@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPWS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="beautiful-header">
+    <div class="header-container">
+      <h1 class="logo">RPWS</h1>
+      <nav class="nav-links">
+        <a href="contact.html"> contact</a>
+        <a href="#participants">Participants</a>
+       <a href="#" id="omodel-content">Ratings</a>
+        <a href="#winner">Winner</a>
+        
+       <a href="#" id="open-graph">Graph</a>
+      </nav>
+    </div>
+    <div class="header-content">
+      <!-- Optional header content -->
+    </div>
+  </header>
+<section class="ratings">
+   <div id="ratings-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-ratings">&times;</span>
+      <h2>Ratings Overview</h2>
+      <p class="ratings-desc">
+        Here you can see the average ratings of all participants. The top performer is highlighted. Rate your favorite participant and help them reach the top!
+      </p>
+      <div class="leaderboard">
+        <h3>Leaderboard</h3>
+        <ol>
+          <li><span>Durgesh</span> <span class="score">4.9 ★</span></li>
+          <li><span>Anupam</span> <span class="score">4.8 ★</span></li>
+          <li><span>Ishan</span> <span class="score">4.7 ★</span></li>
+          <li><span>Amit</span> <span class="score">4.6 ★</span></li>
+          <li><span>Aman</span> <span class="score">4.5 ★</span></li>
+          <li><span>Alok</span> <span class="score">4.4 ★</span></li>
+          <li><span>Pankaj</span> <span class="score">4.3 ★</span></li>
+          <li><span>Aditya</span> <span class="score">4.2 ★</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- Participants Popup Modal -->
+  <div id="participants-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-participants">&times;</span>
+      <h2>Participants</h2>
+      <div class="participants-list">
+        <div class="participant">
+          <img src="WhatsApp Image 2025-05-25 at 11.27.19_18a41e73.jpg" alt="Durgesh" class="avatar">
+          <h3>Durgesh</h3>
+          <p>Role: Organizer</p>
+        </div>
+        <div class="participant">
+          <img src="amit.jpg" alt="Amit" class="avatar">
+          <h3>Amit</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="anupam.jpg" alt="Anupam" class="avatar">
+          <h3>Anupam</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="aman.jpg" alt="Aman" class="avatar">
+          <h3>Aman</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="alok.jpg" alt="Alok" class="avatar">
+          <h3>Alok</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="ishan.jpg" alt="Ishan" class="avatar">
+          <h3>Ishan</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="pankaj.jpg" alt="Pankaj" class="avatar">
+          <h3>Pankaj</h3>
+          <p>Role: Member</p>
+        </div>
+        <div class="participant">
+          <img src="aditya.jpg" alt="Aditya" class="avatar">
+          <h3>Aditya</h3>
+          <p>Role: Member</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards-container">
+    <!-- Durgesh Card -->
+    <div class="card">
+      <img src="WhatsApp Image 2025-05-25 at 11.27.19_18a41e73.jpg" alt="Durgesh" class="avatar">
+      <h3>Durgesh</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-durgesh"></h2>
+      <canvas id="ratingChart-durgesh" width="400" height="400"></canvas>
+    </div>
+    <!-- Amit Card -->
+    <div class="card">
+      <img src="amit.jpg" alt="Amit" class="avatar">
+      <h3>Amit</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-amit"></h2>
+      <canvas id="ratingChart-amit" width="400" height="400"></canvas>
+    </div>
+    <!-- Anupam Card -->
+    <div class="card">
+      <img src="anupam.jpg" alt="Anupam" class="avatar">
+      <h3>Anupam</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-anupam"></h2>
+      <canvas id="ratingChart-anupam" width="400" height="400"></canvas>
+    </div>
+    <!-- Aman Card -->
+    <div class="card">
+      <img src="aman.jpg" alt="Aman" class="avatar">
+      <h3>Aman</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-aman"></h2>
+      <canvas id="ratingChart-aman" width="400" height="400"></canvas>
+    </div>
+    <!-- Alok Card -->
+    <div class="card">
+      <img src="alok.jpg" alt="Alok" class="avatar">
+      <h3>Alok</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-alok"></h2>
+      <canvas id="ratingChart-alok" width="400" height="400"></canvas>
+    </div>
+    <!-- Ishan Card -->
+    <div class="card">
+      <img src="ishan.jpg" alt="Ishan" class="avatar">
+      <h3>Ishan</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-Ishan"></h2>
+      <canvas id="ratingChart-Ishan" width="400" height="400"></canvas>
+    </div>
+    <!-- Pankaj Card-->
+    <div class="card">
+      <img src="pankaj.jpg" alt="Pankaj" class="avatar">
+      <h3>Pankaj</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-Pankaj"></h2>
+      <canvas id="ratingChart-Pankaj" width="400" height="400"></canvas>
+    </div>
+    <!-- Aditya Card -->
+    <div class="card">
+      <img src="aditya.jpg" alt="Aditya" class="avatar">
+      <h3>Aditya</h3>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+      </div>
+      <button class="rate-btn">Rate</button>
+      <h2 id="winnerName-aditya"></h2>
+      <canvas id="ratingChart-aditya" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+ 
+  <section id="winner-section" class="winner-section" style="display:none;">
+    <div class="winner-container">
+      <div class="winner-card">
+        <span class="crown">👑</span>
+        <img src="WhatsApp Image 2025-05-25 at 11.27.19_18a41e73.jpg" alt="Durgesh" class="winner-img">
+        <h2>Durgesh <span class="badge">Winner</span></h2>
+        <p>Role: Organizer</p>
+        <div class="winner-bar">
+          <div class="fill" style="width: 95%;"></div>
+        </div>
+        <div style="margin-top:10px;font-size:1.1em;color:#f77062;">Rating: 4.9 ★</div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="contact-btn">Send Message</button>
+  </form>
+</section>
+  <!-- Contact Popup Modal -->
+
+<footer class="beautiful-footer">
+  <div class="footer-content">
+    <h2 class="footer-title">RPWS - Rating Page Winner System</h2>
+    <div class="footer-links">
+      <a href="#participants">Participants</a>
+      <a href="#ratings-modal">Ratings</a>
+      <a href="#winner">Winner</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>Made with <span style="color:#f77062;">&#10084;</span> by <strong>Durgesh & Team</strong></p>
+    <div class="copyright">
+      &copy; 2025 RPWS. All rights reserved.
+    </div>
+  </div>
+</footer>
+<!-- Graph Popup Modal -->
+<div id="graph-modal" class="modal">
+  <div class="modal-content" style="max-width: 700px;">
+    <span class="close-btn" id="close-graph">&times;</span>
+    <h2>Participants Progress</h2>
+    <canvas id="participantsGraph" width="600" height="350"></canvas>
+  </div>
+
+ <div class="participants">
+
+    <div class="card">
+      <img src="aditya.jpg" alt="Aditya">
+      <h2>Aditya</h2>
+      <p>Rating: <span class="score">0</span></p>
+      <button>⭐ Rate</button>
+    </div>
+
+    <div class="card">
+      <img src="alok.jpg" alt="Alok">
+      <h2>Alok</h2>
+      <p>Rating: <span class="score">0</span></p>
+      <button>⭐ Rate</button>
+    </div>
+
+    <div class="card">
+      <img src="aman.jpg" alt="Aman">
+      <h2>Aman</h2>
+      <p>Rating: <span class="score">0</span></p>
+      <button>⭐ Rate</button>
+    </div>
+
+    <p>Rating: <span id="p1-score">0</span></p>
+<button>⭐ Rate</button>
+
+
+
+
+
+</body>
+ <script src="script.js"></script>
+</html>
