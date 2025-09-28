@@ -1,0 +1,65 @@
+/* --- Participants Grid --- */
+.participants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* increased min width */
+  gap: 2rem; /* more spacing between cards */
+}
+
+/* --- Single Participant Card --- */
+.participant {
+  background: linear-gradient(135deg, #e29595, #f0f0f0);
+  border-radius: 1.5rem; /* slightly bigger rounded corners */
+  padding: 1.5rem; /* more padding inside the card */
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* stronger shadow for bigger card */
+  transform: scale(1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+body{
+    background: linear-gradient(135deg, #a57eca, #70526a); /* light background for contrast */
+    color: #333; /* dark text for readability */
+}
+
+/* --- Avatar --- */
+.avatar {
+  width: 140px;  /* bigger avatar */
+  height: 140px; /* bigger avatar */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff; /* slightly thicker border */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  margin-bottom: 0.8rem;
+}
+
+/* --- Participant Text --- */
+.participant h3 {
+  font-size: 1.3rem; /* larger name text */
+  margin: 0.5rem 0 0.3rem;
+  color: #222;
+}
+.participant p {
+  font-size: 1rem; /* larger role text */
+  color: #555;
+  margin: 0;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 500px) {
+  .participants-list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* smaller on mobile */
+    gap: 1rem;
+  }
+  .participant {
+    padding: 1rem;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .participant h3 {
+    font-size: 1.1rem;
+  }
+  .participant p {
+    font-size: 0.9rem;
+  }
+}

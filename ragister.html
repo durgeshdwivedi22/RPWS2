@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ragister.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>RPWS - Register</title>
+</head>
+<body class="register-page">
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Floating Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="header-content">
+      <h1><i class="fas fa-user-plus"></i> Join RPWS</h1>
+      <p>Create your account and start your journey</p>
+    </div>
+  </header>
+
+  <!-- Register Box -->
+  <div class="register-box">
+    <div class="register-header">
+      <h2><i class="fas fa-user-circle"></i> Create Account</h2>
+      <p>Fill in your details to get started</p>
+    </div>
+    
+    <form id="registerForm" class="register-form">
+      <div class="form-row">
+        <div class="input-group">
+          <div class="input-container">
+            <input type="text" id="fullname" placeholder=" " required>
+            <label for="fullname">Full Name</label>
+            <i class="fas fa-user input-icon"></i>
+          </div>
+          <div class="error-message" id="fullname-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-container">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Email Address</label>
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+          <div class="error-message" id="email-error"></div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="input-group">
+          <div class="input-container">
+            <input type="text" id="username" placeholder=" " required>
+            <label for="username">Username</label>
+            <i class="fas fa-at input-icon"></i>
+          </div>
+          <div class="error-message" id="username-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-container">
+            <input type="tel" id="phone" placeholder=" ">
+            <label for="phone">Phone Number</label>
+            <i class="fas fa-phone input-icon"></i>
+          </div>
+          <div class="error-message" id="phone-error"></div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="input-group">
+          <div class="input-container">
+            <input type="password" id="password" placeholder=" " required>
+            <label for="password">Password</label>
+            <i class="fas fa-lock input-icon"></i>
+            <button type="button" class="password-toggle" id="password-toggle">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="password-strength" id="password-strength">
+            <div class="strength-bar">
+              <div class="strength-fill"></div>
+            </div>
+            <span class="strength-text">Password Strength</span>
+          </div>
+          <div class="error-message" id="password-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-container">
+            <input type="password" id="confirm-password" placeholder=" " required>
+            <label for="confirm-password">Confirm Password</label>
+            <i class="fas fa-lock input-icon"></i>
+            <button type="button" class="password-toggle" id="confirm-password-toggle">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="error-message" id="confirm-password-error"></div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="input-group full-width">
+          <div class="input-container">
+            <select id="role" required>
+              <option value="">Select your role</option>
+              <option value="participant">Participant</option>
+              <option value="organizer">Organizer</option>
+              <option value="judge">Judge</option>
+              <option value="spectator">Spectator</option>
+            </select>
+            <label for="role">Role</label>
+            <i class="fas fa-user-tag input-icon"></i>
+          </div>
+          <div class="error-message" id="role-error"></div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">
+            <span class="checkmark"></span>
+            I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="privacy-link">Privacy Policy</a>
+          </label>
+        </div>
+        <div class="error-message" id="terms-error"></div>
+      </div>
+      
+      <div class="form-row">
+        <div class="checkbox-group">
+          <input type="checkbox" id="newsletter">
+          <label for="newsletter">
+            <span class="checkmark"></span>
+            Subscribe to our newsletter for updates
+          </label>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn register-btn">
+        <i class="fas fa-user-plus"></i>
+        <span>Create Account</span>
+        <div class="btn-loading">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+      </button>
+    </form>
+
+    <div class="register-footer">
+      <div class="divider">
+        <span>or</span>
+      </div>
+      
+      <div class="social-login">
+        <button class="social-btn google-btn">
+          <i class="fab fa-google"></i>
+          <span>Continue with Google</span>
+        </button>
+        <button class="social-btn facebook-btn">
+          <i class="fab fa-facebook-f"></i>
+          <span>Continue with Facebook</span>
+        </button>
+      </div>
+      
+      <p class="login-link">
+        Already have an account? 
+        <a href="login.html" class="login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          Sign In
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content success-modal">
+      <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Registration Successful!</h2>
+      <p>Welcome to RPWS! Your account has been created successfully.</p>
+      <div class="success-actions">
+        <button class="btn primary" onclick="window.location.href='index.html'">
+          <i class="fas fa-home"></i>
+          Go to Dashboard
+        </button>
+        <button class="btn secondary" onclick="closeSuccessModal()">
+          <i class="fas fa-times"></i>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="register-script.js"></script>
+</body>
+</html>
